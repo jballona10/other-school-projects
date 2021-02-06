@@ -1,0 +1,69 @@
+#include <iostream>
+#include <iomanip>
+#include <set>
+#include <cmath>
+#include <cstring>
+
+using std::memset;
+using std::cout;
+using std::endl;
+using std::cin;
+using std::setw;
+using std::set;
+using std::sqrt;
+const int NO_ITEMS = 6;
+const int ITEM_W = 4;
+
+void sieve( set<int>& s, const int lower, const int upper) {
+	int upsqrt = (int)sqrt((double)upper);
+	bool *isComposite = new bool[upper + 1];
+	memset(isComposite, 0, sizeof(bool) * (upper + 1));
+	set<int>::iterator i = s.begin() ;
+	set<int>::iterator temp;
+	for (int m = lower; m <= upsqrt; m++)
+	{
+		
+		if (!isComposite[m])
+		{
+			temp = s.erase(i);
+			i = temp;
+		}
+		i++;
+	}
+}
+
+void print_primes( const set<int>& s, const int lower, const int upper) {
+	cout << "There are " << s.size() << " prime numbers between " << lower;
+	cout << " and " << upper << ":\n";
+
+	int count = 0;
+
+	for (set<int>::iterator it = s.begin(); it != s.end(); it++)
+	{
+		if (count == NO_ITEMS)
+			cout << endl;
+	 	cout << setw(ITEM_W) << *it;
+	}
+}
+
+void run_game(set<int>& s) {
+	bool loopSwitch = false;
+	int up;
+	int low;
+	while (!loopSwitch)
+	do
+	{
+		cout << "Enter a lower range: ";
+		cin >> low;
+
+		if (low < 0 && !isdigit(low))
+			
+
+		cout << "
+}
+
+int main() {
+    set<int> s;
+    run_game(s);
+    return 0;
+}

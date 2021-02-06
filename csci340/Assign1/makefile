@@ -1,0 +1,21 @@
+#
+# Program: Assignment 1
+# Programmer: Josue Ballona
+# Logon ID: Z1832823
+# Date Due: January 29
+#
+
+# Compiler Variables
+CCFLAGS = -Wall -std=c++11
+
+# Rule to link object code files to create executable file
+assignment1: assignment1.o
+	g++ $(CCFLAGS) -o assignment1 assignment1.o
+
+# Rules to compile source code file to object code
+assignment1.o: assignment1.cc
+	g++ $(CCFLAGS) -c assignment1.cc
+
+# Pseudo-target to remove object code and executable files
+clean:
+	-rm *.o assignment1

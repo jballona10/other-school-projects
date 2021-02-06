@@ -1,0 +1,61 @@
+Script started on Thu Sep  7 17:28:56 2017
+]0;z1832823@turing: ~z1832823@turing:~$ cd dir1
+]0;z1832823@turing: ~/dir1z1832823@turing:~/dir1$ tree
+[01;34m.[00m
+|-- [01;34mdir2[00m
+|   |-- a.txt
+|   `-- b.txt
+|-- [01;34mdir3[00m
+|   `-- c.txt
+`-- [01;34mdir4[00m
+    |-- [01;34mdir5[00m
+    |   `-- d.txt
+    |-- e.txt
+    `-- f.txt
+
+4 directories, 6 files
+]0;z1832823@turing: ~/dir1z1832823@turing:~/dir1$ mv dir1 dir          v =iv     -iv dir1 dir1a
+mv: cannot stat 'dir1': No such file or directory
+]0;z1832823@turing: ~/dir1z1832823@turing:~/dir1$ cd
+]0;z1832823@turing: ~z1832823@turing:~$ mv -iv dir1 dir1a
+'dir1' -> 'dir1a'
+]0;z1832823@turing: ~z1832823@turing:~$ mv -mv    iv / dir3/c.txt dir2
+mv: cannot stat 'dir3/c.txt': No such file or directory
+]0;z1832823@turing: ~z1832823@turing:~$ mv -iv ./dir3/c.txt dir2
+mv: cannot stat './dir3/c.txt': No such file or directory
+]0;z1832823@turing: ~z1832823@turing:~$ [Kcd dir2 3
+bash: cd: dir3: No such file or directory
+]0;z1832823@turing: ~z1832823@turing:~$ ls
+assign1  [0m[01;36mcourse_html[0m  [01;34mcsci241[0m  [01;34mdir1a[0m  [01;36mpublic_html[0m  [01;34msub1[0m
+]0;z1832823@turing: ~z1832823@turing:~$ cd dir1a
+]0;z1832823@turing: ~/dir1az1832823@turing:~/dir1a$ mv -iv dir3/.ctxt     c.txt di  dir2
+'dir3/c.txt' -> 'dir2/c.txt'
+]0;z1832823@turing: ~/dir1az1832823@turing:~/dir1a$ mv -iv dir4/dir5/d.txt dir2
+'dir4/dir5/d.txt' -> 'dir2/d.txt'
+]0;z1832823@turing: ~/dir1az1832823@turing:~/dir1a$ mv -iv dir4/e.txt dir4 3
+'dir4/e.txt' -> 'dir3/e.txt'
+]0;z1832823@turing: ~/dir1az1832823@turing:~/dir1a$ mv -iv dir4/f.txt dir3
+'dir4/f.txt' -> 'dir3/f.txt'
+]0;z1832823@turing: ~/dir1az1832823@turing:~/dir1a$ ls
+[0m[01;34mdir2[0m  [01;34mdir3[0m  [01;34mdir4[0m
+]0;z1832823@turing: ~/dir1az1832823@turing:~/dir1a$ rm -r     cd  ls dir4
+[0m[01;34mdir5[0m
+]0;z1832823@turing: ~/dir1az1832823@turing:~/dir1a$ ls dir4/dir5
+]0;z1832823@turing: ~/dir1az1832823@turing:~/dir1a$ lsk     rm -r dir4
+]0;z1832823@turing: ~/dir1az1832823@turing:~/dir1a$ ls
+[0m[01;34mdir2[0m  [01;34mdir3[0m
+]0;z1832823@turing: ~/dir1az1832823@turing:~/dir1a$ tree
+[01;34m.[00m
+|-- [01;34mdir2[00m
+|   |-- a.txt
+|   |-- b.txt
+|   |-- c.txt
+|   `-- d.txt
+`-- [01;34mdir3[00m
+    |-- e.txt
+    `-- f.txt
+
+2 directories, 6 files
+]0;z1832823@turing: ~/dir1az1832823@turing:~/dir1a$ exit
+
+Script done on Thu Sep  7 17:36:57 2017
